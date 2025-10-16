@@ -1,0 +1,132 @@
+/* === Estilos Globales === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', Helvetica, sans-serif;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: #fff;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* === Navbar === */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 15px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+.navbar .brand {
+  color: #ffd700;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1.3em;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #ffd700;
+}
+
+/* === Contenedor Principal === */
+main.container {
+  flex: 1;
+  padding: 50px 20px;
+}
+
+/* === Tarjeta de Presentación === */
+.tarjeta {
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 15px;
+  padding: 30px;
+  max-width: 500px;
+  margin: 40px auto;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 1.2em;
+  color: #ffd700;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 1.1em;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  background: #ffd700;
+  color: #000;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+/* === Footer === */
+.footer {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 15px;
+  text-align: center;
+  color: #ccc;
+  font-size: 0.9em;
+  border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+.footer p {
+  margin: 0;
+}
+
+/* === Responsivo === */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .tarjeta {
+    padding: 20px;
+  }
+}

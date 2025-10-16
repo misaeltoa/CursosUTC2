@@ -1,0 +1,5 @@
+.navbar{display:flex;justify-content:space-between;align-items:center;padding:12px 20px;background:#111;color:#fff;position:sticky;top:0;z-index:10}
+.brand{font-weight:700;text-decoration:none;color:#fff}
+.nav-links{display:flex;gap:16px;list-style:none;margin:0;padding:0}
+.nav-links a{text-decoration:none;color:#ddd}
+.nav-links a.active,.nav-links a:hover{color:#fff}
