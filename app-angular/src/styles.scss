@@ -1,0 +1,25 @@
+/* --- Variables y Estilos Globales --- */
+:root {
+    --primary-color: #00a8e8; 
+    --background-color: #1a1a2e; 
+    --card-background: #16213e; 
+    --text-color: #e0e0e0;    
+    --subtext-color: #a0a0c0; 
+    --shadow-color: rgba(0, 0, 0, 0.4);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
