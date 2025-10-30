@@ -1,0 +1,85 @@
+.inicio {
+  font-family: 'Poppins', sans-serif;
+  color: #222;
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, #eef2f3, #dfe6e9);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hero {
+  animation: fadeIn 1.2s ease;
+}
+
+.titulo {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #2d3436;
+}
+
+.subtitulo {
+  font-size: 1.2rem;
+  color: #636e72;
+  margin-top: 0.5rem;
+}
+
+.seccion-info {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.team {
+  margin-top: 2rem;
+}
+
+.team-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.team-buttons button {
+  background: #0984e3;
+  color: white;
+  border: none;
+  padding: 0.9rem 1.5rem;
+  border-radius: 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.team-buttons button:hover {
+  background: #74b9ff;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.pie {
+  margin-top: 3rem;
+  font-size: 0.9rem;
+  color: #636e72;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
