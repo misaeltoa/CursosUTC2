@@ -1,12 +1,23 @@
 import { Routes } from '@angular/router';
+// Importa el index Y a tus compañeros de 'main'
+import { IndexComponent } from './pages/index/index.component';
+import { SergioLuisComponent } from './pages/sergio-luis/sergio-luis.component';
+import { JonathanAlexisComponent } from './pages/jonathan-alexis/jonathan-alexis.component';
+import { YahirMartinezComponent } from './pages/yahir-martinez/yahir-martinez.component';
 
-// 1. Importa SOLAMENTE tu componente, que sí existe
+// ¡AÑADES EL TUYO!
 import { YahirAlejandroComponent } from './pages/yahir-alejandro/yahir-alejandro.component';
+// (Faltarían Saúl y Misael, pero los pueden añadir después)
 
 export const routes: Routes = [
-  // 2. Haz que tu componente sea la ruta por defecto
+  { path: '', redirectTo: 'index', pathMatch: 'full' },
+  { path: 'index', component: IndexComponent },
+  { path: 'sergio-luis', component: SergioLuisComponent },
+  { path: 'jonathan-alexis', component: JonathanAlexisComponent },
+  { path: 'yahir-martinez', component: YahirMartinezComponent },
+
+  // ¡AÑADES TU RUTA!
   { path: 'yahir-alejandro', component: YahirAlejandroComponent },
 
-  // 3. Haz que la página de inicio (ruta vacía) te redirija a tu componente
-  { path: '', redirectTo: 'yahir-alejandro', pathMatch: 'full' }
+  { path: '**', redirectTo: 'index' } // Ruta por defecto
 ];
