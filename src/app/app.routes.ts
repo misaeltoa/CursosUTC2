@@ -5,7 +5,6 @@ import { JonathanAlexisComponent } from './pages/jonathan-alexis/jonathan-alexis
 import { YahirMartinezComponent } from './pages/yahir-martinez/yahir-martinez.component';
 import { YahirAlejandroComponent } from './pages/yahir-alejandro/yahir-alejandro.component';
 
-
 export const routes: Routes = [
   { path: '', redirectTo: 'index', pathMatch: 'full' },
   { path: 'index', component: IndexComponent },
@@ -13,5 +12,5 @@ export const routes: Routes = [
   { path: 'jonathan-alexis', component: JonathanAlexisComponent },
   { path: 'yahir-martinez', component: YahirMartinezComponent },
   { path: 'yahir-alejandro', component: YahirAlejandroComponent },
-  { path: '**', redirectTo: 'index' } // Ruta por defecto
+  { path: '**', redirectTo: 'index' }
 ];
