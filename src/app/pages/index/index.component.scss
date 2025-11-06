@@ -1,0 +1,41 @@
+:host {
+  display: block;
+  min-height: 100vh;
+  background: #0f1221;
+  color: #e7e9f3;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+p {
+  color: #aab0c3;
+  margin-bottom: 30px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+
+.btn {
+  display: inline-block;
+  background: #ffd166;
+  color: #0f1221;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.15s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
