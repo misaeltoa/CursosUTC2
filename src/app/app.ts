@@ -1,10 +1,11 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { YahirAlejandroComponent } from './pages/yahir-alejandro/yahir-alejandro.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet], 
+  imports: [RouterOutlet, YahirAlejandroComponent], 
   templateUrl: './app.html',
   styleUrls: ['./app.scss'],
 })
