@@ -13,5 +13,4 @@ export class SaulFabianComponent {
   toggleDrift() {
     this.drift = !this.drift;
   }
-
 }
