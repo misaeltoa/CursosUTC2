@@ -1,0 +1,18 @@
+# Etapa 1: Build de Angular
+FROM node:20-alpine AS builder
+WORKDIR /app
+
+# Copia package.json y package-lock.json
+COPY ../package*.json ./
+RUN npm ci
+
+# Copia todo el proyecto
+COPY ../ ./
+
+# Build Angular en producción
+RUN npx ng build app-angular --configuration production
+
+# Etapa 2: Servir con Nginx
+FROM nginx:alpine
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+COPY --from=builder /app/dist/app-angular/browser /usr/share/nginx/html
