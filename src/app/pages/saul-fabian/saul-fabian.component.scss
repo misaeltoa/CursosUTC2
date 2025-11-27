@@ -1,0 +1,39 @@
+.scene {
+  position: relative;
+  z-index: 10;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  align-items: end;
+  gap: 20px;
+  padding: 80px 40px;
+
+  .car-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    z-index: 12;
+
+    .smoke {
+      position: absolute;
+      bottom: 8%;
+      width: 40vw;
+      height: 18vh;
+      pointer-events: none;
+      mix-blend-mode: screen;
+      opacity: 0;
+      transition: opacity .25s;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        left: 10%;
+        width: 20%;
+        height: 100%;
+        background: radial-gradient(circle, rgba(200,200,200,0.5), transparent);
+      }
+    }
+  }
+}

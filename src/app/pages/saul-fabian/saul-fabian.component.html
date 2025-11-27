@@ -1,1 +1,50 @@
-<p>saul-fabian works!</p>
+<main class="scene" id="scene">
+    <div class="city">
+      <div class="neon-sign">JDM</div>
+      <div class="buildings"></div>
+    </div>
+
+    <section class="car-wrapper" id="carWrapper">
+      <!-- simple stylized car SVG (no brand logos) -->
+      <svg class="car" viewBox="0 0 800 300" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+        <!-- body -->
+        <g class="car-body">
+          <rect x="60" y="90" rx="30" ry="30" width="680" height="90" />
+          <path d="M120 90 Q200 40 400 40 Q600 40 680 90 Z" />
+        </g>
+        <!-- windows -->
+        <rect class="window" x="220" y="55" rx="10" width="290" height="45"/>
+        <!-- wheels -->
+        <g class="wheels">
+          <circle cx="220" cy="210" r="36" />
+          <circle cx="580" cy="210" r="36" />
+        </g>
+        <!-- headlights -->
+        <g class="lights">
+          <rect class="headlight left" x="50" y="130" width="20" height="12" rx="3"/>
+          <rect class="headlight right" x="730" y="130" width="20" height="12" rx="3"/>
+        </g>
+      </svg>
+
+      <div class="smoke" aria-hidden="true"></div>
+    </section>
+
+    <section class="cards">
+      <article class="card">
+        <h3>Retro R</h3>
+        <p>Suspensión baja, alerón sutil y espíritu de circuito.</p>
+      </article>
+      <article class="card">
+        <h3>Sleeper</h3>
+        <p>Exterior tranquilo, sonido que sorprende.</p>
+      </article>
+      <article class="card">
+        <h3>Track Toy</h3>
+        <p>Barras, frenos, y noches en la ruta.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <small>Hecho con <span class="heart">♥</span> y neumáticos calientes</small>
+  </footer>
