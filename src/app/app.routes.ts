@@ -16,4 +16,5 @@ export const routes: Routes = [
     {path: 'saul-fabian', component: SaulFabianComponent},
     
     {path: '**', redirectTo: 'index'}
+
 ]; // Ruta agregada por el Administrador
