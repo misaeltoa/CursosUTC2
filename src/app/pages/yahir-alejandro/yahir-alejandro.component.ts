@@ -9,6 +9,7 @@ import { Component } from '@angular/core';
 })
 export class YahirAlejandroComponent {
 
+  //Datos míos
   private funFacts: string[] = [
     "Me gusta mucho el Pozole.",
     "Disfruto programar.",
