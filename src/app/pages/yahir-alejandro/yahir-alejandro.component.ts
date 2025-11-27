@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+//Componente
 @Component({
   selector: 'app-yahir-alejandro',
   standalone: true,
