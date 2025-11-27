@@ -1,0 +1,12 @@
+services:
+  web-angular:
+    build: .
+    container_name: angular-nginx-app
+    ports:
+      - "8080:80" # Accederás en localhost:8080
+    networks:
+      - mi-red-app
+
+networks:
+  mi-red-app:
+    driver: bridge
