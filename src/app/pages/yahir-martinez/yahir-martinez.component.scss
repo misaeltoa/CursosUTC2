@@ -1,0 +1,71 @@
+/* Contenedor principal */
+.perfil {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  min-height: 100vh;
+}
+
+.contenedor {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 2rem 3rem;
+  border-radius: 1rem;
+  max-width: 800px;
+  width: 100%;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+.titulo {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #00ffc8;
+}
+
+.subtitulo {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #a0e9ff;
+}
+
+.descripcion, .contacto p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
+  color: #ffdd57;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  li {
+    margin-bottom: 0.6rem;
+    &:before {
+      content: '✔️';
+      margin-right: 0.5rem;
+    }
+  }
+}
+
+.btn-volver {
+  background: #00ffc8;
+  color: #000;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  &:hover {
+    background: #00e0b0;
+    transform: translateY(-2px);
+  }
+}

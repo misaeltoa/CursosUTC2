@@ -1,0 +1,214 @@
+:root{
+  --bg:#07021a;
+  --neon:#00f0ff;
+  --accent:#ff2d95;
+  --glass: rgba(255,255,255,0.06);
+}
+
+*{box-sizing:border-box}
+
+html,body,:host{
+  height:100%;
+  margin:0;
+  font-family:Inter,Segoe UI,Roboto,system-ui,-apple-system,"Helvetica Neue",Arial;
+  color:#e9eef8;
+  background:linear-gradient(180deg,var(--bg) 0%, #0b0830 60%);
+  overflow:hidden;
+}
+
+canvas#particles{
+  position:fixed;
+  inset:0;
+  z-index:0;
+  pointer-events:none;
+}
+
+.topbar{
+  position:fixed;
+  top:12px;
+  left:12px;
+  right:12px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  z-index:20;
+}
+
+.topbar h1{
+  margin:0;
+  font-size:18px;
+  letter-spacing:1px;
+  color:var(--neon);
+  text-shadow:0 0 10px rgba(0,240,255,0.25);
+}
+
+.btn{
+  background:linear-gradient(90deg,var(--accent),#ff7b2d);
+  border:none;
+  padding:8px 12px;
+  border-radius:8px;
+  color:white;
+  cursor:pointer;
+  box-shadow:0 6px 20px rgba(0,0,0,0.5);
+}
+
+.scene{
+  position:relative;
+  z-index:10;
+  height:100vh;
+  display:grid;
+  grid-template-rows:1fr auto;
+  align-items:end;
+  gap:20px;
+  padding:80px 40px;
+}
+
+.city{
+  position:absolute;
+  inset:auto 0 0 0;
+  height:45vh;
+  z-index:1;
+  pointer-events:none;
+}
+
+.neon-sign{
+  position:absolute;
+  left:8%;
+  bottom:32%;
+  font-weight:800;
+  font-size:64px;
+  color:var(--neon);
+  text-shadow:0 0 24px rgba(0,240,255,0.25),0 0 48px rgba(0,120,180,0.12);
+}
+
+.buildings{
+  position:absolute;
+  bottom:0;
+  left:0;
+  right:0;
+  height:60%;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.02), transparent 30%),
+    repeating-linear-gradient(-90deg, rgba(0,0,0,0.35) 0 2px, transparent 2px 22px);
+  filter:blur(14px);
+  opacity:0.55;
+}
+
+.car-wrapper{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:12px;
+  z-index:12;
+  transform-origin:center;
+}
+
+.car{
+  width:min(900px,86vw);
+  height:auto;
+  overflow:visible;
+  filter:
+    drop-shadow(0 20px 40px rgba(0,0,0,0.6))
+    drop-shadow(0 0 24px rgba(0,240,255,0.06));
+}
+
+.car .car-body{fill:#111827}
+.car .window{fill:rgba(255,255,255,0.06)}
+.car .wheels circle{fill:#0b0b0b;stroke:#333}
+.car .headlight{fill:#fff3c3;opacity:0.8;filter:blur(0.6px)}
+
+.car-wrapper .smoke{
+  position:absolute;
+  bottom:8%;
+  width:40vw;
+  height:18vh;
+  pointer-events:none;
+  mix-blend-mode:screen;
+  opacity:0;
+  transition:opacity .25s;
+}
+
+.smoke:before,
+.smoke:after{
+  content:"";
+  position:absolute;
+  left:10%;
+  width:20%;
+  height:100%;
+  background:radial-gradient(circle at 50% 50%, rgba(200,200,200,0.5), transparent);
+  transform:translateX(-40%) scale(0.8);
+  filter:blur(18px);
+}
+
+.smoke:after{
+  left:auto;
+  right:10%;
+  transform:translateX(40%) scale(0.9);
+}
+
+.cards{
+  display:flex;
+  gap:16px;
+  justify-content:center;
+  z-index:12;
+  pointer-events:auto;
+}
+
+.card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 18px 60px rgba(0,0,0,0.55);
+}
+
+.footer{
+  position:fixed;
+  right:12px;
+  bottom:12px;
+  color:rgba(255,255,255,0.6);
+  font-size:13px;
+  z-index:20;
+}
+
+.heart{
+  color:var(--accent);
+  text-shadow:0 0 10px rgba(255,45,149,0.12);
+}
+
+/* animations */
+@keyframes driftShift{
+  0%{transform:translateX(0) rotate(0)}
+  30%{transform:translateX(-12px) rotate(-2deg)}
+  60%{transform:translateX(14px) rotate(3deg)}
+  100%{transform:translateX(0) rotate(0)}
+}
+
+.car-wrapper.drift{
+  animation:driftShift 1.4s ease-in-out infinite;
+  filter:brightness(1.02);
+}
+
+.car-wrapper.drift .smoke{
+  opacity:0.95;
+  animation:smokeRise 900ms linear infinite;
+}
+
+@keyframes smokeRise{
+  0%{transform:translateY(0) scale(0.8);opacity:0.6}
+  100%{transform:translateY(-60px) scale(1.3);opacity:0}
+}
+
+/* flicker */
+.headlight.flicker{
+  animation:headF 350ms infinite;
+}
+
+@keyframes headF{
+  0%{opacity:0.9;filter:blur(0.6px)}
+  40%{opacity:0.45;filter:blur(1.6px)}
+  100%{opacity:0.9;filter:blur(0.6px)}
+}
+
+/* responsive */
+@media (max-width:720px){
+  .neon-sign{font-size:40px;left:4%}
+  .cards{flex-direction:column;align-items:center}
+}

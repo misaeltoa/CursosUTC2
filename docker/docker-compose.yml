@@ -1,0 +1,9 @@
+services:
+  angular-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: practica-angular-container
+    ports:
+      - "4200:80"
+    restart: unless-stopped
